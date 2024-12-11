@@ -9,5 +9,9 @@ My thesis on real time speech recognition
 
 ### tried using same model async with a better result but still not parallel 
 
-### tried changing the asr using batching parallel execution with better result with one model running 
+### test with a model for every client with processes for whisper servers instead of threads, performances not so different 
+
+### tried changing the asr using batching parallel execution with better result with one model running shared for every client
+
+### TODO: model with shared buffer 
 
