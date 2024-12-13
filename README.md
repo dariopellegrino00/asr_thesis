@@ -19,3 +19,11 @@ TODO: better describe previous steps
 - **at first without any changes to the old transcript args it ignored big parts of the audios**
 - **adding a pause in the middle with silence approx 2 sec didnt change much, a big pause 20 sec approx made it work, but 20 sec for every client is a lot if there are more than 2 clients (more than 1 min to do inference on) **
 - **tweaking tha vad(voice actiity detection) options helped keeping the silence between audio push to 2 second to make it work, it worked very nice but for longer segments approx more than 10 seconds, smaller segments had problems**
+
+### nvidia MPS try:
+**trying to use mps and multiprocessing to have indipent whisper server using gpu parallel (splitting resources)**
+remember to disable it when updating cuda or gpu drivers:
+  - enable mps ```sudo nvidia-smi -pm 1```   
+  - start mps deamon ```sudo nvidia-cuda-mps-control -d``` 
+  - stop mps deamon ```echo quit | sudo nvidia-cuda-mps-control```
+
