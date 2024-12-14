@@ -31,4 +31,9 @@ remember to disable it when updating cuda or gpu drivers:
   - stop mps deamon ```echo quit | sudo nvidia-cuda-mps-control```
 cant do this solution: faster whisper wont load models using mps, there is something blocking in the cuda implementation of faster-whisper ctranslate2.
 
-### Triton server 
+### Multiple audio transcription with transformers pipeline batched 10 and large-v3-turbo, slower than sequential with faster-whisper batched 10 and large-v3-turbo
+2.9 parallel transformers 10 audio buffer batch 10
+2.7 sequential faster whisper 10 audio buffer batch 10
+
+### Triton server TODO
+
