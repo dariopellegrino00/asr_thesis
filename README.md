@@ -40,5 +40,8 @@ cant do this solution: faster whisper wont load models using mps, there is somet
 - test it on rtx 6000 ada and rtx 2070
 - threading events solution exaplain what is in parallel_whisper online file 
 - simplifiying confirming segments using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz Done
+- TODO
+  - confirm single words
 - TODO confirm single words
+  -  test try catch release get lock in part with self.last_transcribed.extend to check if this was why the deadlock happened 
 
