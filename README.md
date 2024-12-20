@@ -39,6 +39,6 @@ cant do this solution: faster whisper wont load models using mps, there is somet
 - way better results having a shared buffer
 - test it on rtx 6000 ada and rtx 2070
 - threading events solution exaplain what is in parallel_whisper online file 
-- simplifiying confirming segments using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz
-- TODO confirm single words 
+- simplifiying confirming segments using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz Done
+- TODO confirm single words
 
