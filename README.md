@@ -35,5 +35,10 @@ cant do this solution: faster whisper wont load models using mps, there is somet
 2.9 parallel transformers 10 audio buffer batch 10
 2.7 sequential faster whisper 10 audio buffer batch 10
 
-### Triton server TODO
+### Shared buffer using batched inference pipeline
+- way better results having a shared buffer
+- test it on rtx 6000 ada and rtx 2070
+- threading events solution exaplain what is in parallel_whisper online file 
+- simplifiying confirming segments using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz
+- TODO confirm single words 
 
