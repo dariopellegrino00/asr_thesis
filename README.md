@@ -41,11 +41,14 @@ cant do this solution: faster whisper wont load models using mps, there is somet
 - way better results having a shared buffer
 - test it on rtx 6000 ada and rtx 2070
 - threading events solution exaplain what is in parallel_whisper online file 
-- simplifiying confirming segments using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz Done
+- simplifiying confirming single words using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz Done
   - confirming on exact match was crazy "Hi" and "hi" where considered different requiring one extra (or more) inference loop to confirm 
-  - check if levechstein distance) This was implemented using quick ratio of rapidfuzz   
-- TODO
-  - confirm single words
+  - check if levechstein distance) This was implemented using quick ratio of rapidfuzz
+- Fixed: the wrong offsetting of sefments using segment start caused bug where other words ended up in other clients hypothesis buffer.
+  - this was fixed using the real start pairing it at append time in the shared buf
+  - this also caused performance improvement, faster confirmation
+- Improving bu leaving less confirmed words in the buffer
+  - we do this because we want to fasten the process with a loose in WER, this must also be tweaked by the user instancing the sarver based on server performances(GPU mainly: num workers, beam size, segment cut time) 
 - TODO confirm single words
   -  test try catch release get lock in part with self.last_transcribed.extend to check if this was why the deadlock happened 
 
