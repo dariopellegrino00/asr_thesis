@@ -36,10 +36,14 @@ cant do this solution: faster whisper wont load models using mps, there is somet
 2.7 sequential faster whisper 10 audio buffer batch 10
 
 ### Shared buffer using batched inference pipeline
+- **Back to our shared buffer experiment**
+- using clipping in transcrition options
 - way better results having a shared buffer
 - test it on rtx 6000 ada and rtx 2070
 - threading events solution exaplain what is in parallel_whisper online file 
 - simplifiying confirming segments using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz Done
+  - confirming on exact match was crazy "Hi" and "hi" where considered different requiring one extra (or more) inference loop to confirm 
+  - check if levechstein distance) This was implemented using quick ratio of rapidfuzz   
 - TODO
   - confirm single words
 - TODO confirm single words
