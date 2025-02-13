@@ -51,4 +51,5 @@ cant do this solution: faster whisper wont load models using mps, there is somet
   - we do this because we want to fasten the process with a loose in WER, this must also be tweaked by the user instancing the sarver based on server performances(GPU mainly: num workers, beam size, segment cut time) 
 - TODO confirm single words
   -  test try catch release get lock in part with self.last_transcribed.extend to check if this was why the deadlock happened 
+  #### Huge bug fix: segments were not in order when returned by transcribe, now sorting them will never make other client segments end up in other clients online processors 
 
