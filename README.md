@@ -38,7 +38,7 @@ cant do this solution: faster whisper wont load models using mps, there is somet
 ### Shared buffer using batched inference pipeline
 - **Back to our shared buffer experiment**
 - using clipping in transcrition options
-- way better results having a shared buffer
+- way better results having a shared buffer, approx 2x better than having every client transcribe on their own
 - test it on rtx 6000 ada and rtx 2070
 - threading events solution exaplain what is in parallel_whisper online file 
 - simplifiying confirming single words using text similarity algorithm https://github.com/rapidfuzz/RapidFuzz Done
